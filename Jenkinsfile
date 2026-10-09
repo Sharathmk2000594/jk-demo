@@ -11,5 +11,10 @@ pipeline {
                 sh 'ls -l'
             }
         }
+        stage('Commit') {
+            steps {
+                sh 'git log --oneline -3'
+            }
+        }
     }
 }
