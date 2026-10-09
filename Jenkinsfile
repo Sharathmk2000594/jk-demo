@@ -19,5 +19,10 @@ pipeline {
                 sh 'git log --oneline -3'
             }
         }
+        stage('Next') {
+            steps {
+                build job: 'p1', wait: false
+            }
+        }
     }
 }
